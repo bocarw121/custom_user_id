@@ -1,0 +1,22 @@
+[package]
+name = "custom_user_id"
+version = "0.0.1"
+edition = "2021"
+license = "MIT"
+license-file = "LICENSE"
+authors = ["Bocar Wane < "]
+description = "Generates a random id with string of your choice appended or prepended to it"
+repository = "https://github.com/bocarw121/custom_user_id.git"
+categories = ["no-std", "wasm"]
+keywords = ["generate", "userid", "id", "webassembly", ]
+homepage = "https://github.com/bocarw121/custom_user_id.git"
+
+
+[dependencies.uuid]
+version = "1.2.1"
+features = [
+    "v4",                # Lets you generate random UUIDs
+    "fast-rng",          # Use a faster (but still sufficiently random) RNG
+    "macro-diagnostics", # Enable better diagnostics for compile-time UUIDs
+    "js"
+]
